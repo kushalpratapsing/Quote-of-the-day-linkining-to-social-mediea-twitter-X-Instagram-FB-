@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+
+body {
+    background-color: #369683;
+}
+
+.quote-box {
+    background-color: #fff;
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) perspective(800px);
+    padding: 40px;
+    border-radius: 10%;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(40, 23, 61, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.quote-box:hover {
+    transform: translate(-50%, -50%) perspective(800px) rotateX(30deg) translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+    
+
+
+.quote-box h3 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.quote-box h3::after {
+    content: '';
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgb(83, 126, 171);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.quote-box blockquote {
+    font-size: 26px;
+    min-height: 100px;
+}
+
+.quote-box blockquote::before,
+.quote-box blockquote::after {
+    content: '"';
+}
+
+.quote-box span {
+    display: block;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+}
+
+.quote-box span::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: #64868A;
+    position: absolute;
+    top: 50%;
+    left: -30px;
+}
+
+.quote-box div {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.quote-box button {
+    background: #05396B;
+    color: #fff;
+    border-radius: 85px;
+    border: none;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.quote-box button img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.quote-box button:nth-child(2),
+.quote-box button:nth-child(3),
+.quote-box button:nth-child(4) {
+    width: fit-content;
+    background: transparent;
+    color: rgb(54, 50, 50);
+}
